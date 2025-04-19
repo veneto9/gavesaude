@@ -4,14 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GAVE – Guia de Ações em Vigilância Epidemiológica</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* --- ESTILOS GERAIS --- */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    /* --- HEADER/BANNER --- */
+    .banner {
+      width: 100%;
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .banner img {
+      max-width: 100%;
+      height: auto;
+      max-height: 150px; /* Altura máxima da logo */
+      display: block;
+      margin: 0 auto;
+    }
+    
+    /* --- NAVEGAÇÃO --- */
+    nav {
+      background-color: #4CAF50;
+      padding: 1rem 0;
+      margin-top: 0; /* Removido espaçamento superior extra */
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1.5rem;
+      font-weight: bold;
+    }
+    
+    /* --- SEÇÕES --- */
+    section {
+      margin: 2rem 0;
+    }
+    
+    .botao {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    
+    /* --- FOOTER --- */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+    
+    footer a {
+      color: #4CAF50;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER COM BANNER E LOGO -->
+  <!-- HEADER COM BANNER RESPONSIVO -->
   <header class="banner">
     <div class="container">
-      <img src="logo-gave.png" alt="Logo do GAVE" style="height: 100px; margin-top: 1rem;">
+      <img src="logo-gave.png" alt="Logo do GAVE">
     </div>
   </header>
 
