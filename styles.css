@@ -1,124 +1,122 @@
-/* styles.css para o site GAVE */
-body {
-  font-family: "Georgia", serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fdfcf9;
-  color: #3c2e27;
-  line-height: 1.6;
+/* no topo do styles.css */
+:root {
+  /* cores inspiradas no seu site pessoal */
+  --cor-fundo:      #FFFFFF;
+  --cor-texto:      #24292E;
+  --cor-link:       #0366D6;
+  --cor-borda:      #E1E4E8;
 }
 
-/* Largura da coluna de texto */
+/* aplicando as variáveis */
+body {
+  background-color: var(--cor-fundo);
+  color:            var(--cor-texto);
+  font-family:      "Georgia", serif;
+  margin:           0;
+  padding:          0;
+  line-height:      1.6;
+}
+
 .container {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  margin:    0 auto;
+  padding:   0 1.5rem;
 }
 
-/* Banner para o header */
+/* BANNER */
 .banner {
-  padding: 1rem 0;
-  height: 250px;
+  padding:          1rem 0;
+  height:           250px;
   background-image: url("Brown.png");
-  background-size: cover;
+  background-size:  cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-bottom: 2px solid #d6cfc3;
+  border-bottom:    2px solid var(--cor-borda);
 }
 
-/* Container interno do banner */
 .banner .container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 250px;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center; /* ou flex-start */
+  height:           100%;
 }
 
-header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.3rem;
-  color: #3c2e27;
-}
-
-header p {
-  font-size: 0.95rem;
-  margin-top: 0;
-  color: #5c4a3d;
-}
-
+/* NAVEGAÇÃO */
 nav {
-  display: flex;
+  display:         flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 1rem;
-  background-color: #eae3d8;
-  border-bottom: 1px solid #cfc7b7;
+  flex-wrap:       wrap;
+  gap:             1.5rem;
+  padding:         1rem;
+  background-color: var(--cor-fundo);
+  border-bottom:    1px solid var(--cor-borda);
 }
 
 nav a {
-  color: #5a4332;
+  color:           var(--cor-link);
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight:     bold;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
+/* CONTEÚDO PRINCIPAL */
 main {
-  background-color: #fffaf6;
-  border-radius: 8px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
+  background-color: #FFFDF6; /* ou var(--cor-fundo) se preferir */
+  border-radius:    8px;
+  margin:           2rem auto;
+  padding:          0 1.5rem;
 }
 
 h2 {
-  color: #3c2e27;
-  font-size: 1.3rem;
-  border-bottom: 1px solid #d6cfc3;
-  padding-bottom: 0.3rem;
-  margin-top: 2rem;
-}
-
-ul {
-  list-style-type: square;
-  padding-left: 1.5rem;
-  margin-top: 0.5rem;
+  color:           var(--cor-texto);
+  font-size:       1.3rem;
+  border-bottom:   1px solid var(--cor-borda);
+  padding-bottom:  0.3rem;
+  margin-top:      2rem;
 }
 
 p {
   margin-bottom: 1rem;
 }
 
+ul {
+  list-style-type: square;
+  padding-left:    1.5rem;
+  margin-top:      0.5rem;
+}
+
+/* BOTÕES */
 .botao {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  background-color: #d6cfc3;
-  color: #3c2e27;
-  font-weight: bold;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.2s;
+  display:         inline-block;
+  padding:         0.5rem 1rem;
+  margin-top:      0.5rem;
+  background-color: var(--cor-link);
+  color:            var(--cor-fundo);
+  font-weight:      bold;
+  border-radius:    4px;
+  text-decoration:  none;
+  transition:       background-color 0.2s;
 }
 
 .botao:hover {
-  background-color: #cfc7b7;
+  background-color: var(--cor-borda);
 }
 
+/* RODAPÉ */
 footer {
-  background-color: #f2ebe1;
-  border-top: 1px solid #d6cfc3;
-  color: #5c4a3d;
-  font-size: 0.9rem;
-  padding: 2rem 1rem;
-  text-align: center;
+  background-color: var(--cor-fundo);
+  border-top:       1px solid var(--cor-borda);
+  color:            var(--cor-texto);
+  font-size:        0.9rem;
+  padding:          2rem 1rem;
+  text-align:       center;
 }
 
 footer a {
-  color: #6b4c3b;
+  color:           var(--cor-link);
   text-decoration: none;
 }
 
@@ -126,37 +124,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsividade */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    gap: 0.8rem;
   }
 
   main {
     padding: 0 1rem;
   }
 
-  header h1 {
-    font-size: 1.5rem;
-  text-align: center;
-  }
-
-  header p {
-    font-size: 0.85rem;
-    text-align: center;
-  }
-
   h2 {
     font-size: 1.1rem;
-  }
-
-  .banner {
-    height: 200px;
-  }
-
-  .banner .container {
-    height: 200px;
-    justify-content: center;
   }
 }
