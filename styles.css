@@ -24,13 +24,14 @@ body {
   padding:   0 1.5rem;
 }
 
-/* BANNER - IMAGEM DE FORA A FORA */
+/* BANNER - IMAGEM DE FORA A FORA SEM ESPAÇOS */
 .banner {
   padding: 0;
   margin: 0;
   width: 100%;
   overflow: hidden;
   border-bottom: 2px solid var(--cor-borda);
+  line-height: 0; /* Remove espaços fantasmas */
 }
 
 .banner .container {
@@ -38,6 +39,7 @@ body {
   margin: 0;
   width: 100%;
   max-width: 100%;
+  line-height: 0; /* Remove espaços fantasmas */
 }
 
 .logo-principal {
@@ -45,8 +47,11 @@ body {
   height: auto;
   display: block;
   margin: 0;
+  padding: 0;
+  border: none;
 }
 
+/* Restante do CSS permanece igual */
 /* NAVEGAÇÃO */
 nav {
   display:         flex;
@@ -67,6 +72,8 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+/* ... (restante do CSS permanece igual ao anterior) ... */
 
 /* CONTEÚDO PRINCIPAL */
 main {
