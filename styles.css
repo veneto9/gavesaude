@@ -5,6 +5,7 @@
   --cor-texto:      #24292E;
   --cor-link:       #0366D6;
   --cor-borda:      #E1E4E8;
+  --cor-destaque:   #FFFDF6;
 }
 
 /* aplicando as variáveis */
@@ -23,22 +24,27 @@ body {
   padding:   0 1.5rem;
 }
 
-/* BANNER */
+/* BANNER - IMAGEM DE FORA A FORA */
 .banner {
-  padding:          1rem 0;
-  height:           250px;
-  background-image: url("Brown.png");
-  background-size:  cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-bottom:    2px solid var(--cor-borda);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 2px solid var(--cor-borda);
 }
 
 .banner .container {
-  display:          flex;
-  align-items:      center;
-  justify-content:  center; /* ou flex-start */
-  height:           100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.logo-principal {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
 }
 
 /* NAVEGAÇÃO */
@@ -64,35 +70,37 @@ nav a:hover {
 
 /* CONTEÚDO PRINCIPAL */
 main {
-  background-color: #FFFDF6; /* ou var(--cor-fundo) se preferir */
+  background-color: var(--cor-destaque);
   border-radius:    8px;
   margin:           2rem auto;
-  padding:          0 1.5rem;
+  padding:          1.5rem;
 }
 
 h2 {
   color:           var(--cor-texto);
-  font-size:       1.3rem;
+  font-size:       1.5rem;
   border-bottom:   1px solid var(--cor-borda);
-  padding-bottom:  0.3rem;
+  padding-bottom:  0.5rem;
   margin-top:      2rem;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
 }
 
 ul {
   list-style-type: square;
-  padding-left:    1.5rem;
-  margin-top:      0.5rem;
+  padding-left:    1.8rem;
+  margin-top:      0.8rem;
+  line-height: 1.7;
 }
 
 /* BOTÕES */
 .botao {
   display:         inline-block;
-  padding:         0.5rem 1rem;
-  margin-top:      0.5rem;
+  padding:         0.6rem 1.2rem;
+  margin-top:      0.8rem;
   background-color: var(--cor-link);
   color:            var(--cor-fundo);
   font-weight:      bold;
@@ -103,6 +111,7 @@ ul {
 
 .botao:hover {
   background-color: var(--cor-borda);
+  color: var(--cor-texto);
 }
 
 /* RODAPÉ */
@@ -124,17 +133,30 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.creditos {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
 /* RESPONSIVO */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.8rem;
   }
 
   main {
-    padding: 0 1rem;
+    padding: 1rem;
+    margin: 1rem auto;
   }
 
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+  }
+
+  .container {
+    padding: 0 1rem;
   }
 }
