@@ -32,6 +32,13 @@ header p {
   color: #5c4a3d;
 }
 
+/* 🔽 ADICIONADO AQUI */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 nav {
   display: flex;
   justify-content: center;
