@@ -1,94 +1,27 @@
+!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GAVE – Guia de Ações em Vigilância Epidemiológica</title>
-  <style>
-    /* RESET PARA REMOVER MARGENS INDESEJADAS */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    /* BANNER COM TAMANHO FIXO */
-    .banner-container {
-      width: 100%;
-      text-align: center;
-      padding: 5px 0;
-      background: #f8f9fa;
-    }
-    
-    .banner-logo {
-      width: 200px;
-      height: 50px;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-    }
-    
-    /* BARRA DE NAVEGAÇÃO */
-    nav {
-      background: white;
-      padding: 1rem 0;
-      text-align: center;
-      border-bottom: 1px solid #e1e4e8;
-    }
-    
-    nav a {
-      color: #0366d6;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 1rem;
-      font-size: 1.1rem;
-    }
-    
-    /* CONTEÚDO PRINCIPAL */
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-    
-    h1, h2 {
-      color: #24292e;
-      margin-bottom: 1rem;
-    }
-    
-    /* RESPONSIVIDADE */
-    @media (max-width: 600px) {
-      nav a {
-        margin: 0 0.5rem;
-        font-size: 1rem;
-      }
-      
-      .banner-logo {
-        width: 180px;
-        height: 45px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- BANNER COM DIMENSÕES FIXAS -->
-  <div class="banner-container">
-    <img src="logo-gave.png" alt="GAVE" class="banner-logo">
-  </div>
 
-  <!-- MENU DE NAVEGAÇÃO -->
-  <nav>
-    <a href="#">Início</a>
-    <a href="#">Sobre</a>
-    <a href="#">Publicações</a>
-    <a href="#">Indicadores</a>
-  </nav>
+  <!-- BANNER RESPONSIVO 1584×271 -->
+  <header class="banner">
+    <div class="container">
+      <img
+        src="gave_logo1.png"
+        alt="Banner GAVE – Guia de Vigilância Epidemiológica"
+        width="1584" height="271"
+        class="banner-img"
+      >
+    </div>
+  </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
-  <div class="container">
-    <h1>GAVE</h1>
-    <h2>Sobre Mim</h2>
-    <!-- Seu conteúdo aqui -->
-  </div>
+  <!-- resto do seu HTML… -->
+
 </body>
 </html>
