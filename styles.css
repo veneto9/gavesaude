@@ -24,24 +24,25 @@ body {
   padding:   0 1.5rem;
 }
 
-/* BANNER - IMAGEM DE FORA A FORA SEM ESPAÇOS */
+/* BANNER LIMITADO AO RECORTE */
 .banner {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  overflow: hidden;
-  border-bottom: 2px solid var(--cor-borda);
-  line-height: 0; /* Remove espaços fantasmas */
+  max-width: 400px;        /* largura do recorte */
+  height: 100px;           /* altura do recorte */
+  margin: 0 auto;          /* centraliza horizontalmente */
+  overflow: hidden;        /* esconde topo e base que excedem */
+  background-image: url("Brown.png");
+  background-size: cover;
+  background-position: center center;
 }
 
+/* o container interno pode manter display flex, mas sem alterar largura */
 .banner .container {
-  padding: 0;
-  margin: 0;
   width: 100%;
-  max-width: 100%;
-  line-height: 0; /* Remove espaços fantasmas */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .logo-principal {
   width: 100%;
   height: auto;
