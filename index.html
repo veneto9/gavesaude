@@ -4,168 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GAVE – Guia de Ações em Vigilância Epidemiológica</title>
-  <style>
-    :root {
-      /* cores inspiradas no seu site pessoal */
-      --cor-fundo:      #FFFFFF;
-      --cor-texto:      #24292E;
-      --cor-link:       #0366D6;
-      --cor-borda:      #E1E4E8;
-      --cor-destaque:   #FFFDF6;
-    }
-
-    /* --- ESTILOS GERAIS --- */
-    body {
-      background-color: var(--cor-fundo);
-      color: var(--cor-texto);
-      font-family: "Georgia", serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    
-    /* --- HEADER/BANNER --- */
-    .banner {
-      width: 100%;
-      padding: 1rem 0;
-      height: 250px;
-      background-image: url("Brown.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-bottom: 2px solid var(--cor-borda);
-    }
-    
-    .banner img {
-      max-width: 100%;
-      height: auto;
-      max-height: 150px;
-      display: block;
-      margin: 0 auto;
-    }
-    
-    /* --- NAVEGAÇÃO --- */
-    nav {
-      background-color: var(--cor-fundo);
-      padding: 1rem 0;
-      margin-top: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      border-bottom: 1px solid var(--cor-borda);
-    }
-    
-    nav a {
-      color: var(--cor-link);
-      text-decoration: none;
-      font-weight: bold;
-    }
-    
-    nav a:hover {
-      text-decoration: underline;
-    }
-    
-    /* --- SEÇÕES --- */
-    section {
-      margin: 2rem 0;
-    }
-    
-    .botao {
-      display: inline-block;
-      background-color: var(--cor-link);
-      color: var(--cor-fundo);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.2s;
-    }
-    
-    .botao:hover {
-      background-color: var(--cor-borda);
-      color: var(--cor-texto);
-    }
-    
-    /* --- FOOTER --- */
-    footer {
-      background-color: var(--cor-fundo);
-      color: var(--cor-texto);
-      padding: 2rem 0;
-      margin-top: 2rem;
-      border-top: 1px solid var(--cor-borda);
-    }
-    
-    footer a {
-      color: var(--cor-link);
-      text-decoration: none;
-    }
-    
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* CONTEÚDO PRINCIPAL */
-    main {
-      background-color: var(--cor-destaque);
-      border-radius: 8px;
-      margin: 2rem auto;
-    }
-
-    h2 {
-      color: var(--cor-texto);
-      font-size: 1.3rem;
-      border-bottom: 1px solid var(--cor-borda);
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-    }
-
-    ul {
-      list-style-type: square;
-      padding-left: 1.5rem;
-      margin-top: 0.5rem;
-    }
-
-    /* RESPONSIVO */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 0.8rem;
-      }
-
-      main {
-        padding: 0 1rem;
-      }
-
-      h2 {
-        font-size: 1.1rem;
-      }
-
-      .banner {
-        height: 200px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- HEADER COM BANNER RESPONSIVO -->
   <header class="banner">
     <div class="container">
-      <img src="logo-gave.png" alt="Logo do GAVE">
+      <img src="logo-gave.png" alt="Logo do GAVE" class="logo-principal">
     </div>
   </header>
 
   <nav>
     <div class="container">
       <a href="index.html">Início</a>
+      <a href="#sobre">Sobre</a>
       <a href="#publicacoes">Publicações</a>
       <a href="#indicadores">Indicadores</a>
       <a href="#contato">Contato</a>
@@ -174,14 +27,15 @@
 
   <main>
     <div class="container">
-      <section id="destaque">
-        <h2>🧪 Destaque da Semana</h2>
-        <p>Atualização dos casos de leptospirose no estado do Rio de Janeiro. Veja os dados e entenda os riscos atuais.</p>
-        <a href="#" class="botao">Ver Painel</a>
+      <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Sou Amaro Neto, doutorando em Saúde Coletiva (IESC/UFRJ), Sanitarista e Geógrafo.</p>
+        <p>Mestre em Ensino das Ciências da Saúde, com especializações em Ciências Ambientais e Educação na Saúde para Preceptores do SUS.</p>
+        <p>Atuo como Sanitarista na Vigilância Epidemiológica em Barra do Piraí/RJ e professor, conectando saúde pública e território através da análise de dados espaciais em saúde. Meu trabalho integra educação e gestão pública, buscando formas criativas de atuação com foco na análise e comunicação de informações sobre doenças negligenciadas em Saúde Pública.</p>
       </section>
 
       <section id="publicacoes">
-        <h2>📚 Publicações Recentes</h2>
+        <h2>Publicações Recentes</h2>
         <ul>
           <li><a href="#">Boletim Epidemiológico: Doenças de Notificação Imediata</a></li>
           <li><a href="#">Glossário de Termos em Saúde Coletiva</a></li>
@@ -190,20 +44,21 @@
       </section>
 
       <section id="indicadores">
-        <h2>📊 Indicadores em Destaque</h2>
+        <h2>Indicadores em Destaque</h2>
         <p>Acesse painéis com indicadores territoriais e temporais em saúde pública, atualizados mensalmente.</p>
+        <a href="#" class="botao">Acessar Painel</a>
       </section>
     </div>
   </main>
 
   <footer id="contato">
     <div class="container">
-      <h2>🌐 Contato</h2>
+      <h2>Contato</h2>
       <p>🐦 <a href="https://twitter.com/amaroveneto" target="_blank">@amaroveneto</a></p>
       <p>📸 <a href="https://instagram.com/amarovneto" target="_blank">@amarovneto</a></p>
       <p>📫 <a href="mailto:amaroneto@ufrj.br">amaroneto@ufrj.br</a></p>
       <p>📍 Rio de Janeiro, Brasil</p>
-      <p style="margin-top: 1rem; font-size: 0.8rem;">&copy; 2025 GAVE · Amaro Neto</p>
+      <p class="creditos">&copy; 2025 GAVE · Amaro Neto</p>
     </div>
   </footer>
 
