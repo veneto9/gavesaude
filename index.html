@@ -12,16 +12,18 @@
       box-sizing: border-box;
     }
     
-    /* BANNER REDUZIDO */
+    /* BANNER COM TAMANHO FIXO */
     .banner-container {
       width: 100%;
       text-align: center;
-      padding: 10px 0;
+      padding: 5px 0;
+      background: #f8f9fa;
     }
     
     .banner-logo {
-      max-width: 280px;
-      max-height: 70px;
+      width: 200px;
+      height: 50px;
+      object-fit: contain;
       display: block;
       margin: 0 auto;
     }
@@ -53,15 +55,28 @@
       color: #24292e;
       margin-bottom: 1rem;
     }
+    
+    /* RESPONSIVIDADE */
+    @media (max-width: 600px) {
+      nav a {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+      }
+      
+      .banner-logo {
+        width: 180px;
+        height: 45px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- BANNER REDUZIDO -->
+  <!-- BANNER COM DIMENSÕES FIXAS -->
   <div class="banner-container">
     <img src="logo-gave.png" alt="GAVE" class="banner-logo">
   </div>
 
-  <!-- MENU SIMPLES -->
+  <!-- MENU DE NAVEGAÇÃO -->
   <nav>
     <a href="#">Início</a>
     <a href="#">Sobre</a>
@@ -69,7 +84,7 @@
     <a href="#">Indicadores</a>
   </nav>
 
-  <!-- CONTEÚDO -->
+  <!-- CONTEÚDO PRINCIPAL -->
   <div class="container">
     <h1>GAVE</h1>
     <h2>Sobre Mim</h2>
