@@ -9,7 +9,15 @@ body {
   line-height: 1.6;
 }
 
+/* largura da sua coluna de texto */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 /* 🔽 NOVA CLASSE BANNER PARA O HEADER */
+/* banner como fundo, mas limitado ao container interno */
 .banner {
   padding: 1rem 0;
   height: 250px;
@@ -20,14 +28,12 @@ body {
   border-bottom: 2px solid #d6cfc3;
 }
 
-/* 🔽 CONTAINER PARA CENTRALIZAR CONTEÚDO DA LOGO */
+/* container interno do banner */
 .banner .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 250px;
 }
 
 header h1 {
@@ -40,12 +46,6 @@ header p {
   font-size: 0.95rem;
   margin-top: 0;
   color: #5c4a3d;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 nav {
@@ -70,11 +70,10 @@ nav a:hover {
 }
 
 main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
   background-color: #fffaf6;
   border-radius: 8px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
 h2 {
@@ -113,11 +112,11 @@ p {
 
 footer {
   background-color: #f2ebe1;
-  padding: 2rem 1rem;
-  text-align: center;
+  border-top: 1px solid #d6cfc3;
   color: #5c4a3d;
   font-size: 0.9rem;
-  border-top: 1px solid #d6cfc3;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 footer a {
