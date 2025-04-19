@@ -5,9 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GAVE – Guia de Ações em Vigilância Epidemiológica</title>
   <style>
+    :root {
+      /* cores inspiradas no seu site pessoal */
+      --cor-fundo:      #FFFFFF;
+      --cor-texto:      #24292E;
+      --cor-link:       #0366D6;
+      --cor-borda:      #E1E4E8;
+      --cor-destaque:   #FFFDF6;
+    }
+
     /* --- ESTILOS GERAIS --- */
     body {
-      font-family: Arial, sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      font-family: "Georgia", serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
@@ -23,32 +34,43 @@
     /* --- HEADER/BANNER --- */
     .banner {
       width: 100%;
-      background-color: #f8f9fa;
-      text-align: center;
       padding: 1rem 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      height: 250px;
+      background-image: url("Brown.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-bottom: 2px solid var(--cor-borda);
     }
     
     .banner img {
       max-width: 100%;
       height: auto;
-      max-height: 150px; /* Altura máxima da logo */
+      max-height: 150px;
       display: block;
       margin: 0 auto;
     }
     
     /* --- NAVEGAÇÃO --- */
     nav {
-      background-color: #4CAF50;
+      background-color: var(--cor-fundo);
       padding: 1rem 0;
-      margin-top: 0; /* Removido espaçamento superior extra */
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--cor-borda);
     }
     
     nav a {
-      color: white;
+      color: var(--cor-link);
       text-decoration: none;
-      margin-right: 1.5rem;
       font-weight: bold;
+    }
+    
+    nav a:hover {
+      text-decoration: underline;
     }
     
     /* --- SEÇÕES --- */
@@ -58,23 +80,77 @@
     
     .botao {
       display: inline-block;
-      background-color: #4CAF50;
-      color: white;
+      background-color: var(--cor-link);
+      color: var(--cor-fundo);
       padding: 0.5rem 1rem;
       border-radius: 4px;
       text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+    
+    .botao:hover {
+      background-color: var(--cor-borda);
+      color: var(--cor-texto);
     }
     
     /* --- FOOTER --- */
     footer {
-      background-color: #333;
-      color: white;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
       padding: 2rem 0;
       margin-top: 2rem;
+      border-top: 1px solid var(--cor-borda);
     }
     
     footer a {
-      color: #4CAF50;
+      color: var(--cor-link);
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    main {
+      background-color: var(--cor-destaque);
+      border-radius: 8px;
+      margin: 2rem auto;
+    }
+
+    h2 {
+      color: var(--cor-texto);
+      font-size: 1.3rem;
+      border-bottom: 1px solid var(--cor-borda);
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      main {
+        padding: 0 1rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+      }
+
+      .banner {
+        height: 200px;
+      }
     }
   </style>
 </head>
