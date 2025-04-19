@@ -9,15 +9,25 @@ body {
   line-height: 1.6;
 }
 
-header {
-  text-align: center;
-  padding: 1rem;
+/* 🔽 NOVA CLASSE BANNER PARA O HEADER */
+.banner {
+  padding: 1rem 0;
   height: 250px;
   background-image: url("Brown.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: 2px solid #d6cfc3;
+}
+
+/* 🔽 CONTAINER PARA CENTRALIZAR CONTEÚDO DA LOGO */
+.banner .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 header h1 {
@@ -32,7 +42,6 @@ header p {
   color: #5c4a3d;
 }
 
-/* 🔽 ADICIONADO AQUI */
 .container {
   max-width: 800px;
   margin: 0 auto;
