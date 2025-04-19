@@ -1,170 +1,74 @@
-/* no topo do styles.css */
+/* RESET E VARIÁVEIS */
 :root {
-  /* cores inspiradas no seu site pessoal */
-  --cor-fundo:      #FFFFFF;
-  --cor-texto:      #24292E;
-  --cor-link:       #0366D6;
-  --cor-borda:      #E1E4E8;
-  --cor-destaque:   #FFFDF6;
+  --cor-primaria: #0366d6;
+  --cor-texto: #24292e;
+  --cor-borda: #e1e4e8;
 }
 
-/* aplicando as variáveis */
-body {
-  background-color: var(--cor-fundo);
-  color:            var(--cor-texto);
-  font-family:      "Georgia", serif;
-  margin:           0;
-  padding:          0;
-  line-height:      1.6;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  max-width: 800px;
-  margin:    0 auto;
-  padding:   0 1.5rem;
-}
-
-/* BANNER LIMITADO AO RECORTE */
-.banner {
-  max-width: 400px;        /* largura do recorte */
-  height: 100px;           /* altura do recorte */
-  margin: 0 auto;          /* centraliza horizontalmente */
-  overflow: hidden;        /* esconde topo e base que excedem */
-  background-image: url("Brown.png");
-  background-size: cover;
-  background-position: center center;
-}
-
-/* o container interno pode manter display flex, mas sem alterar largura */
-.banner .container {
+/* BANNER SUPERIOR */
+.banner-top {
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  line-height: 0; /* Remove espaços indesejados */
 }
-.logo-principal {
+
+.logo-banner {
   width: 100%;
   height: auto;
   display: block;
-  margin: 0;
-  padding: 0;
-  border: none;
 }
 
-/* Restante do CSS permanece igual */
-/* NAVEGAÇÃO */
-nav {
-  display:         flex;
+/* BARRA DE NAVEGAÇÃO */
+.nav-bar {
+  background-color: white;
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+}
+
+.nav-bar .container {
+  display: flex;
   justify-content: center;
-  flex-wrap:       wrap;
-  gap:             1.5rem;
-  padding:         1rem;
-  background-color: var(--cor-fundo);
-  border-bottom:    1px solid var(--cor-borda);
+  gap: 2rem;
 }
 
-nav a {
-  color:           var(--cor-link);
+.nav-bar a {
+  color: var(--cor-primaria);
   text-decoration: none;
-  font-weight:     bold;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ... (restante do CSS permanece igual ao anterior) ... */
 
 /* CONTEÚDO PRINCIPAL */
-main {
-  background-color: var(--cor-destaque);
-  border-radius:    8px;
-  margin:           2rem auto;
-  padding:          1.5rem;
+.main-content {
+  padding: 2rem 0;
 }
 
-h2 {
-  color:           var(--cor-texto);
-  font-size:       1.5rem;
-  border-bottom:   1px solid var(--cor-borda);
-  padding-bottom:  0.5rem;
-  margin-top:      2rem;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-p {
-  margin-bottom: 1.2rem;
-  line-height: 1.7;
-}
-
-ul {
-  list-style-type: square;
-  padding-left:    1.8rem;
-  margin-top:      0.8rem;
-  line-height: 1.7;
-}
-
-/* BOTÕES */
-.botao {
-  display:         inline-block;
-  padding:         0.6rem 1.2rem;
-  margin-top:      0.8rem;
-  background-color: var(--cor-link);
-  color:            var(--cor-fundo);
-  font-weight:      bold;
-  border-radius:    4px;
-  text-decoration:  none;
-  transition:       background-color 0.2s;
-}
-
-.botao:hover {
-  background-color: var(--cor-borda);
-  color: var(--cor-texto);
-}
-
-/* RODAPÉ */
+/* FOOTER */
 footer {
-  background-color: var(--cor-fundo);
-  border-top:       1px solid var(--cor-borda);
-  color:            var(--cor-texto);
-  font-size:        0.9rem;
-  padding:          2rem 1rem;
-  text-align:       center;
-}
-
-footer a {
-  color:           var(--cor-link);
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.creditos {
-  margin-top: 1.5rem;
-  font-size: 0.8rem;
-  color: #666;
+  border-top: 1px solid var(--cor-borda);
+  padding: 1.5rem 0;
+  text-align: center;
 }
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-  nav {
+  .nav-bar .container {
     flex-direction: column;
-    gap: 0.8rem;
-    padding: 0.8rem;
-  }
-
-  main {
-    padding: 1rem;
-    margin: 1rem auto;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .container {
-    padding: 0 1rem;
+    align-items: center;
+    gap: 0.5rem;
   }
 }
