@@ -140,29 +140,38 @@ body {
   background-color: var(--verde-profund);
   color: #fff;
   text-align: center;
-  padding: 1rem 0; /* Reduz altura do rodapé */
+  padding: 1rem 0; /* Altura reduzida */
   border-top: 1px solid var(--marrom-terroso);
   font-size: 0.95rem;
 }
 
+.site-footer h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.site-footer ul {
+  list-style: none;         /* Remove os bullets */
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;    /* Centraliza os itens da lista */
+  text-align: left;
+}
+
+.site-footer li {
+  margin-bottom: 0.5rem;
+  color: #f0eada;
+}
+
 .site-footer a {
-  color: #f0eada; /* tom claro e suave para links */
+  color: #f0eada;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .site-footer a:hover {
   text-decoration: underline;
   color: #ffffff;
-}
-
-.site-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-}
-
-.site-footer li {
-  margin-bottom: 0.3rem;
 }
 
 
