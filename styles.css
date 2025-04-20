@@ -13,28 +13,31 @@
 /* ------------------------------------------------------------
    1) Cabeçalho
    ------------------------------------------------------------ */
+/* =====================
+   1) Cabeçalho
+   ===================== */
 .site-header {
-  background-color: #fffaf6;    /* tom creme suave */
-  border-bottom: 2px solid #d6cfc3;
+  /* suas regras... */
 }
 .site-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  flex-wrap: wrap;           /* autoriza quebra de linha */
 }
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #3c2e27;               /* marrom escuro */
+
+/* =====================
+   Menu abaixo do logo
+   ===================== */
+.site-nav {
+  flex-basis: 100%;          /* força o nav para a linha de baixo */
+  margin-top: 1rem;          /* espaçamento entre logo e menu */
+  text-align: center;        /* centraliza links */
 }
+
 .site-nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #5a4332;               /* marrom intermediário */
-}
-.site-nav a:hover {
-  text-decoration: underline;
+  margin: 0 1rem;
+  display: inline-block;
 }
 
 /* ------------------------------------------------------------
@@ -101,16 +104,21 @@
 /* ------------------------------------------------------------
    3) Rodapé
    ------------------------------------------------------------ */
+/* Rodapé */
 .site-footer {
-  background-color: #2a5ca8;    /* azul escuro */
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 0;
+  background-color: #12362f;    /* tom principal */
+  color:            #FFF;       /* cor do texto */
+  text-align:       center;
+  padding:          2rem 0;     /* espaçamento vertical */
+  border-top:       1px solid #D6CFC3;
 }
-.contacts span {
-  margin: 0 0.5rem;
-  font-size: 1.5rem;
+
+/* Ícones/contatos dentro do rodapé */
+.site-footer .contacts span {
+  margin:    0 0.5rem;
+  font-size: 1.2rem;
 }
+
 
 /* ------------------------------------------------------------
    Responsividade mínima
@@ -131,21 +139,20 @@
 /* ==========================================
    1) Garante que o header esconda excessos
    ========================================== */
-.site-header {
-  position: relative;
-  overflow: hidden;    /* qualquer elemento que “ultrapasse” é cortado */
+.site-header .container {
+  display: flex;
+  align-items: center; /* centraliza logo e nav na mesma linha */
+  justify-content: space-between;
 }
 
 /* ==========================================
    2) Limita o tamanho da logo à altura do banner
    ========================================== */
-.logo-image {
+.gave-logo1 .logo-image {
   display: block;      /* remove espaçamento inline */
-  max-width: 150px;    /* largura máxima que você tinha definido */
-  height: auto;        /* mantém proporção original */
-  max-height: 100px;   /* NÃO ultrapassa 100px de altura */
-                       /* ajuste esse valor conforme a altura real do seu header */
-}
+  max-width: 150px;    /* ajuste esse valor ao tamanho que você quer */
+  width: 100%;         /* em telas menores, ela “flui” até esse max-width */
+  height: auto;        /* preserva proporção }
 
 /* ==========================================
    3) Se seu header tiver padding vertical,
@@ -161,3 +168,54 @@
 */
    
 }
+  
+  
+  /* paleta.css */
+
+/* ————————————————————————————————————————————
+   Paleta de cores do site (8 tons)
+   ———————————————————————————————————————————— */
+:root {
+ <link rel="stylesheet" href="paleta.css">
+<link rel="stylesheet" href="styles.css">
+
+  
+  /* tons de bege */
+  --bege-claro-1:      #EDD6B2; /* primeiro círculo (mais amarelado) */
+  --bege-claro-2:      #EDE0BA; /* segundo círculo (mais esbranquiçado) */
+
+  /* tons de oliva */
+  --oliva-claro:       #C8C197; /* terceiro círculo (verde-amarelado claro) */
+  --oliva:             #8E8640; /* sétimo círculo (verde-oliva médio) */
+  --oliva-escuro:      #555534; /* oitavo círculo (verde-oliva escuro) */
+
+  /* tons terrosos */
+  --marrom-terroso:    #A45F3B; /* quarto círculo (marrom quente) */
+  --laranja-terroso:   #A66E31; /* sexto círculo (laranja terroso) */
+
+  /* tom profundo */
+  --verde-profund:     #194C42; /* quinto círculo (verde escuro acinzentado) */
+body {
+  background-color: var(--bege-claro-2);
+  color:            var(--verde-profund);
+}
+
+.site-header {
+  background-color: var(--bege-claro-1);
+}
+
+.btn {
+  background-color: var(--oliva);
+  color:            var(--bege-claro-2);
+}
+
+.btn:hover {
+  background-color: var(--oliva-escuro);
+}
+
+footer {
+  border-top-color: var(--marrom-terroso);
+}}
+
+ 
+  
