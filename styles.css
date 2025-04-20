@@ -12,6 +12,40 @@
   overflow: hidden;                  /* esconde bordas excedentes */
 }
 
+
+.site-header {
+  background-color: #fdfcf9;     /* ou transparente, conforme seu layout */
+  padding: 1rem 0;
+  border-bottom: 2px solid #d6cfc3;
+}
+
+.site-header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;                     /* espaço entre logo e texto */
+}
+
+.site-logo {
+  display: block;
+  max-width: 150px;              /* ajusta tamanho da sua imagem */
+  height: auto;
+}
+
+.site-title h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #3c2e27;
+}
+
+.site-title p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+
 /* Texto posicionado sobre o banner */
 .banner-text {
   position: absolute;
