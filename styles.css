@@ -50,19 +50,14 @@ body {
   flex-wrap: wrap;
 }
 
-.gave-logo1 .logo-image {
-  display: block;
-  max-width: 1000px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
+.gave-logo1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .site-nav {
-  flex-basis: 100%;
-  margin-top: 0; /* estava 1rem, diminui para aproximar do logo */
-  padding-top: 10px;
-  text-align: center;
+  margin-top: 0;
+  padding-top: 5px;
 }
 .site-nav a {
   margin: 0 1rem;
