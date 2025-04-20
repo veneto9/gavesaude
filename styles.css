@@ -127,4 +127,37 @@
   .highlight-indicators h2 {
     font-size: 1.4rem;
   }
+
+/* ==========================================
+   1) Garante que o header esconda excessos
+   ========================================== */
+.site-header {
+  position: relative;
+  overflow: hidden;    /* qualquer elemento que “ultrapasse” é cortado */
+}
+
+/* ==========================================
+   2) Limita o tamanho da logo à altura do banner
+   ========================================== */
+.logo-image {
+  display: block;      /* remove espaçamento inline */
+  max-width: 150px;    /* largura máxima que você tinha definido */
+  height: auto;        /* mantém proporção original */
+  max-height: 100px;   /* NÃO ultrapassa 100px de altura */
+                       /* ajuste esse valor conforme a altura real do seu header */
+}
+
+/* ==========================================
+   3) Se seu header tiver padding vertical,
+      subtraia-o do max-height:
+   ========================================== */
+/*
+.site-header .container {
+  padding: 1rem 0;
+}
+.logo-image {
+  max-height: calc(100% - 2rem);  / * 100% da altura do header – (1rem top + 1rem bottom) * /
+}
+*/
+   
 }
