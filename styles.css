@@ -38,9 +38,8 @@ body {
    1. CABEÇALHO E NAVEGAÇÃO
 ===================================================== */
 .site-header {
-  padding: 0.5rem 0;
+  padding: 0;
 }
-
 
 .site-header .container {
   display: flex;
@@ -54,6 +53,13 @@ body {
   padding-bottom: 0;
 }
 
+.gave-logo1 .logo-image {
+  display: block;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 .site-nav {
   margin-top: 0;
   padding-top: 5px;
