@@ -151,7 +151,7 @@
 .gave-logo1 .logo-image {
   display: block;      /* remove espaçamento inline */
   max-width: 100px;    /* ajuste esse valor ao tamanho que você quer */
-  width: 80%;         /* em telas menores, ela “flui” até esse max-width */
+  width: 40%;         /* em telas menores, ela “flui” até esse max-width */
   height: auto;        /* preserva proporção }
 
 /* ==========================================
