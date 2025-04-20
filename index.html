@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GaveSaúde</title>
   <style>
-    /* 1) Banner como background, já na largura/altura desejadas */
+    /* Banner com dimensões fixas */
     .banner {
       position: relative;
-      width: 100%;
-      max-width: 1584px;        /* largura nativa */
-      height: 271px;            /* altura nativa */
-      margin: 0 auto;
+      width: 1584px;               /* largura exata do recorte */
+      height: 271px;               /* altura exata do recorte */
+      margin: 0 auto;              /* centraliza na viewport */
       background: url("gave_logo1.png") no-repeat center;
-      background-size: cover;
-      overflow: hidden;         /* corta qualquer excesso */
+      background-size: 1584px 271px; /* força o tamanho do recorte */
+      overflow: hidden;            /* esconde qualquer excesso */
     }
 
-    /* 2) Container interno para o texto, centradinho */
+    /* Texto centralizado vertical e horizontalmente */
     .banner-text {
       position: absolute;
-      top: 50%; 
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 90%;               /* ajuste conforme espaço livre */
-      max-width: 1200px;        /* não deixa o texto se espalhar demais */
-      text-align: center;       /* ou left, se preferir alinhado à esquerda */
-      color: #3C2E27;           /* escolha uma cor com contraste */
+      width: 90%;                  /* ou ajuste para caber no espaço livre */
+      text-align: center;          /* centraliza o texto */
+      color: #3C2E27;              /* marrom escuro da paleta */
     }
     .banner-text h1 {
       font-size: 2.5rem;
-      margin: 0 0 0.5em;
+      margin: 0.2em 0;
     }
     .banner-text p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin: 0;
     }
 
-    /* resto do seu CSS… */
+    /* Responsividade mínima: reduz proporcionalmente em telas menores */
+    @media (max-width: 1600px) {
+      .banner {
+        width: 100%;
+        max-width: 1584px;
+        background-size: cover;  /* adapta o background à largura reduzida */
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header agora só com a div de texto em cima do background -->
   <header class="banner">
     <div class="banner-text">
       <h1>Guia de Vigilância Epidemiológica</h1>
-      <p>Portal de apoio a profissionais e gestores em saúde pública</p>
+      <p>Portal de apoio a profissionais e gestores em Saúde Pública</p>
     </div>
   </header>
 
-  <!-- seu .main-container e o resto do site continuam abaixo… -->
+  <!-- Resto do site... -->
 
 </body>
 </html>
