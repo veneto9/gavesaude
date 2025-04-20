@@ -1,8 +1,32 @@
-/* styles.css */
+/* =====================================================
+   PALETA DE CORES (dentro do :root)
+===================================================== */
+:root {
+  --bege-claro-1:      #EDD6B2;
+  --bege-claro-2:      #EDE0BA;
 
-/* ------------------------------------------------------------
-   Container central: limita largura, adiciona espaçamento lateral
-   ------------------------------------------------------------ */
+  --oliva-claro:       #C8C197;
+  --oliva:             #8E8640;
+  --oliva-escuro:      #555534;
+
+  --marrom-terroso:    #A45F3B;
+  --laranja-terroso:   #A66E31;
+
+  --verde-profund:     #194C42;
+}
+
+/* =====================================================
+   CONFIGURAÇÃO GLOBAL
+===================================================== */
+body {
+  background-color: var(--bege-claro-2);
+  color: var(--verde-profund);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -10,49 +34,57 @@
   box-sizing: border-box;
 }
 
-/* ------------------------------------------------------------
-   1) Cabeçalho
-   ------------------------------------------------------------ */
-/* =====================
-   1) Cabeçalho
-   ===================== */
+/* =====================================================
+   1. CABEÇALHO E NAVEGAÇÃO
+===================================================== */
 .site-header {
-  /* suas regras... */
+  background-color: var(--bege-claro-1);
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--oliva-claro);
 }
+
 .site-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;           /* autoriza quebra de linha */
+  flex-wrap: wrap;
 }
 
-/* =====================
-   Menu abaixo do logo
-   ===================== */
+.gave-logo1 .logo-image {
+  display: block;
+  max-width: 50px;
+  width: 40%;
+  height: auto;
+}
+
 .site-nav {
-  flex-basis: 100%;          /* força o nav para a linha de baixo */
-  margin-top: 1rem;          /* espaçamento entre logo e menu */
-  text-align: center;        /* centraliza links */
+  flex-basis: 100%;
+  margin-top: 1rem;
+  text-align: center;
 }
-
 .site-nav a {
   margin: 0 1rem;
   display: inline-block;
+  color: var(--verde-profund);
+  text-decoration: none;
+}
+.site-nav a:hover {
+  text-decoration: underline;
 }
 
-/* ------------------------------------------------------------
-   2) Conteúdo Principal
-   ------------------------------------------------------------ */
+/* =====================================================
+   2. CONTEÚDO PRINCIPAL
+===================================================== */
 .site-main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
+
 .site-main section {
   margin-bottom: 2rem;
 }
 
-/* Títulos de seção com ícone inline */
 .highlight-week h2,
 .recent-posts h2,
 .highlight-indicators h2 {
@@ -67,11 +99,10 @@
   margin-right: 0.5rem;
 }
 
-/* Botão “Ver Painel” */
 .btn {
   display: inline-block;
-  background-color: #8E8640;   /* verde-oliva da sua paleta */
-  color: #fff;
+  background-color: var(--oliva);
+  color: var(--bege-claro-2);
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -80,10 +111,9 @@
   transition: background-color 0.2s;
 }
 .btn:hover {
-  background-color: #555534;   /* tom mais escuro no hover */
+  background-color: var(--oliva-escuro);
 }
 
-/* Lista de publicações */
 .recent-posts ul {
   list-style: disc inside;
   padding-left: 0;
@@ -94,138 +124,49 @@
   color: #3c2e27;
 }
 
-/* Texto simples em indicadores */
 .highlight-indicators p {
   font-size: 1.1rem;
   color: #3c2e27;
   margin: 0;
 }
 
-/* ------------------------------------------------------------
-   3) Rodapé
-   ------------------------------------------------------------ */
-/* Rodapé */
+/* =====================================================
+   3. RODAPÉ
+===================================================== */
 .site-footer {
-  background-color: #12362f;    /* tom principal */
-  color:            #FFF;       /* cor do texto */
-  text-align:       center;
-  padding:          2rem 0;     /* espaçamento vertical */
-  border-top:       1px solid #D6CFC3;
+  background-color: var(--verde-profund);
+  color: #FFF;
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--marrom-terroso);
 }
 
-/* Ícones/contatos dentro do rodapé */
 .site-footer .contacts span {
-  margin:    0 0.5rem;
+  margin: 0 0.5rem;
   font-size: 1.2rem;
 }
 
-
-/* ------------------------------------------------------------
-   Responsividade mínima
-   ------------------------------------------------------------ */
+/* =====================================================
+   4. RESPONSIVIDADE
+===================================================== */
 @media (max-width: 600px) {
   .site-nav {
-    display: none;              /* esconde nav em mobile, se quiser */
+    display: none;
   }
-  .container, .site-main {
+
+  .container,
+  .site-main {
     padding: 0 0.5rem;
   }
+
   .highlight-week h2,
   .recent-posts h2,
   .highlight-indicators h2 {
     font-size: 1.4rem;
   }
-}
 
-/* ==========================================
-   1) Garante que o header esconda excessos
-   ========================================== */
-.site-header .container {
-  display: flex;
-  align-items: center; /* centraliza logo e nav na mesma linha */
-  justify-content: space-between;
-}
-
-/* ==========================================
-   2) Limita o tamanho da logo à altura do banner
-   ========================================== */
-.gave-logo1 .logo-image {
-  display: block;      /* remove espaçamento inline */
-  max-width: 50px;    /* ajuste esse valor ao tamanho que você quer */
-  width: 40%;         /* em telas menores, ela “flui” até esse max-width */
-  height: auto;        /* preserva proporção */
-   }
-
- 
-  /* paleta.css */
-
-/* ————————————————————————————————————————————
-   Paleta de cores do site (8 tons)
-   ———————————————————————————————————————————— */
-
-  
-  /* tons de bege */
-  --bege-claro-1:      #EDD6B2; /* primeiro círculo (mais amarelado) */
-  --bege-claro-2:      #EDE0BA; /* segundo círculo (mais esbranquiçado) */
-
-  /* tons de oliva */
-  --oliva-claro:       #C8C197; /* terceiro círculo (verde-amarelado claro) */
-  --oliva:             #8E8640; /* sétimo círculo (verde-oliva médio) */
-  --oliva-escuro:      #555534; /* oitavo círculo (verde-oliva escuro) */
-
-  /* tons terrosos */
-  --marrom-terroso:    #A45F3B; /* quarto círculo (marrom quente) */
-  --laranja-terroso:   #A66E31; /* sexto círculo (laranja terroso) */
-
-  /* tom profundo */
-  --verde-profund:     #194C42; /* quinto círculo (verde escuro acinzentado) */
-body {
-  background-color: var(--bege-claro-2);
-  color:            var(--verde-profund);
-}
-
-.site-header {
-  background-color: var(--bege-claro-1);
-}
-
-.btn {
-  background-color: var(--oliva);
-  color:            var(--bege-claro-2);
-}
-
-.btn:hover {
-  background-color: var(--oliva-escuro);
-}
-
-footer {
-  border-top-color: var(--marrom-terroso);
-}
-   
- */ ==========================================
-   3) Se seu header tiver padding vertical,
-      subtraia-o do max-height:
-   ========================================== 
-/*
-
-   /* -----------------------------------------------
-   Variáveis de Cores – Paleta
------------------------------------------------ */
-:root {
-  --bege-claro-1:      #EDD6B2;
-  --bege-claro-2:      #EDE0BA;
-  --oliva-claro:       #C8C197;
-  --oliva:             #8E8640;
-  --oliva-escuro:      #555534;
-  --marrom-terroso:    #A45F3B;
-  --laranja-terroso:   #A66E31;
-  --verde-profund:     #194C42;
-}
-
-/* -----------------------------------------------
-   Base
------------------------------------------------ */
-body {
-  background-color: var(--bege-claro-2);
-  color: var(--verde-profund);
-  font-family: sans-serif;
+  .gave-logo1 .logo-image {
+    max-width: 70px;
+    width: auto;
+  }
 }
