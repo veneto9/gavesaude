@@ -139,7 +139,7 @@ body {
 .rodape-novo {
   background-color: #2c2c2c;
   color: #fff;
-  padding: 2rem 0 1rem;
+  padding: 1rem 0 rem;
   font-size: 0.95rem;
 }
 .logo-rodape {
@@ -158,8 +158,8 @@ body {
 }
 
 .coluna {
-  flex: 1 1 150px;
-  margin: 1rem;
+  flex: 1 1 200px;
+  margin: 0.5rem;
 }
 
 .coluna h3 {
