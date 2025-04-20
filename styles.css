@@ -38,10 +38,9 @@ body {
    1. CABEÇALHO E NAVEGAÇÃO
 ===================================================== */
 .site-header {
-  background-color: var(--bege-claro-1);
-  padding: 1rem 0;
-  border-bottom: 2px solid var(--oliva-claro);
+  padding: 0.5rem 0;
 }
+
 
 .site-header .container {
   display: flex;
