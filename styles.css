@@ -38,7 +38,8 @@ body {
    1. CABEÇALHO E NAVEGAÇÃO
 ===================================================== */
 .site-header {
-  padding: 0;
+  background-color: pink;
+   padding: 0;
 }
 
 .site-header .container {
@@ -49,6 +50,7 @@ body {
 }
 
 .gave-logo1 {
+  background-color: lightblue;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -61,6 +63,7 @@ body {
   margin: 0 auto;
 }
 .site-nav {
+  background-color: lightgreen;
   margin-top: 0;
   padding-top: 5px;
 }
