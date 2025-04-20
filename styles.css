@@ -152,32 +152,15 @@
   display: block;      /* remove espaçamento inline */
   max-width: 50px;    /* ajuste esse valor ao tamanho que você quer */
   width: 40%;         /* em telas menores, ela “flui” até esse max-width */
-  height: auto;        /* preserva proporção }
+  height: auto;        /* preserva proporção
+   }
 
-/* ==========================================
-   3) Se seu header tiver padding vertical,
-      subtraia-o do max-height:
-   ========================================== */
-/*
-.site-header .container {
-  padding: 1rem 0;
-}
-.logo-image {
-  max-height: calc(100% - 2rem);  / * 100% da altura do header – (1rem top + 1rem bottom) * /
-}
-*/
-   
-}
-  
-  
+ 
   /* paleta.css */
 
 /* ————————————————————————————————————————————
    Paleta de cores do site (8 tons)
    ———————————————————————————————————————————— */
-:root {
- <link rel="stylesheet" href="paleta.css">
-<link rel="stylesheet" href="styles.css">
 
   
   /* tons de bege */
@@ -215,7 +198,10 @@ body {
 
 footer {
   border-top-color: var(--marrom-terroso);
-}}
-
- 
-  
+}
+   
+ /* ==========================================
+   3) Se seu header tiver padding vertical,
+      subtraia-o do max-height:
+   ========================================== */
+/*
