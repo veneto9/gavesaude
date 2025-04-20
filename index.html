@@ -1,60 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GaveSaúde</title>
-  <style>
-    /* Banner com dimensões fixas */
-    .banner {
-      position: relative;
-      width: 1584px;               /* largura exata do recorte */
-      height: 271px;               /* altura exata do recorte */
-      margin: 0 auto;              /* centraliza na viewport */
-      background: url("gave_logo1.png") no-repeat center;
-      background-size: 1584px 271px; /* força o tamanho do recorte */
-      overflow: hidden;            /* esconde qualquer excesso */
-    }
-
-    /* Texto centralizado vertical e horizontalmente */
-    .banner-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90%;                  /* ou ajuste para caber no espaço livre */
-      text-align: center;          /* centraliza o texto */
-      color: #3C2E27;              /* marrom escuro da paleta */
-    }
-    .banner-text h1 {
-      font-size: 2.5rem;
-      margin: 0.2em 0;
-    }
-    .banner-text p {
-      font-size: 1.1rem;
-      margin: 0;
-    }
-
-    /* Responsividade mínima: reduz proporcionalmente em telas menores */
-    @media (max-width: 1600px) {
-      .banner {
-        width: 100%;
-        max-width: 1584px;
-        background-size: cover;  /* adapta o background à largura reduzida */
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAVE</title>
+  <!-- Aqui você chama o CSS externo -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header class="banner">
-    <div class="banner-text">
-      <h1>Guia de Vigilância Epidemiológica</h1>
-      <p>Portal de apoio a profissionais e gestores em Saúde Pública</p>
+  <!-- ======= TOPO COM LOGO ======= -->
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/logo.png" alt="Amaro Viana Neto" class="site-logo">
+      <!-- Se quiser, pode incluir título ou slogan ao lado/abaixo -->
+      <div class="site-title">
+        <h1>Amaro Viana Neto</h1>
+        <p>Saúde Coletiva & Epidemiologia</p>
+      </div>
     </div>
   </header>
-
-  <!-- Resto do site... -->
-
+  
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="curriculo.html">📄 Currículo</a>
+    <a href="https://epidemio.wixsite.com/gave" target="_blank">🔗 Site GAVE</a>
+    <a href="https://github.com/veneto9" target="_blank">💻 GitHub</a>
+  </nav>
+  
+  <main>
+    <section class="secao">
+      <h2>🧑‍⚕️ Sobre Mim</h2>
+      <p>Sou Amaro Neto, doutorando em Saúde Coletiva (IESC/UFRJ), Sanitarista e Geógrafo. Mestre em Ensino das Ciências da Saúde, com especializações em Ciências Ambientais e Educação na Saúde para Preceptores do SUS.</p>
+      
+      <p>Atuo como Sanitarista na Vigilância Epidemiológica em Barra do Piraí/RJ e professor, conectando saúde pública e território através da análise de dados espaciais em saúde. Meu trabalho integra educação e gestão pública, buscando formas criativas de atuação com foco na análise e comunicação de informações sobre doenças negligenciadas em Saúde Pública.</p>
+    </section>
+    
+    <section class="secao">
+      <h2>📚 Projetos</h2>
+      
+      <div class="projeto-card">
+        <h3>Scripts em R para análises Epidemiológicas</h3>
+        <p>Desenvolvimento de ferramentas em R para análise de dados epidemiológicos, facilitando a vigilância e tomada de decisões baseadas em evidências.</p>
+      </div>
+      
+      <div class="projeto-card">
+        <h3>Geoprocessamento em Saúde</h3>
+        <p>Mapas e visualizações espaciais para análise da distribuição de doenças negligenciadas, identificando padrões e fatores de risco territoriais.</p>
+      </div>
+      
+      <div class="projeto-card">
+        <h3>Território: análise e visualizações de indicadores</h3>
+        <p>Estudo de determinantes sociais e ambientais da saúde através da visualização de indicadores contextuais em diferentes territórios.</p>
+      </div>
+      
+      <div class="projeto-card">
+        <h3>Análise espacial dos casos de Leptospirose no Estado do Rio de Janeiro</h3>
+        <p>Investigação dos padrões de distribuição da leptospirose no RJ, identificando fatores ambientais e sociais associados à incidência da doença.</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div>
+      <p>Amaro Neto | <a href="curriculo.html">Ver currículo</a></p>
+    </div>
+    
+    <section>
+      <h2 style="font-size: 1rem; margin: 1rem 0 0.5rem;">🌐 Contato</h2>
+      <p style="margin: 0.2rem 0;">🐦 <a href="https://twitter.com/amaroveneto" target="_blank">@amaroveneto</a></p>
+      <p style="margin: 0.2rem 0;">📸 <a href="https://instagram.com/amarovneto" target="_blank">@amarovneto</a></p>
+      <p style="margin: 0.2rem 0;">📫 <a href="mailto:amaroneto@ufrj.br">amaroneto@ufrj.br</a></p>
+      <p style="margin: 0.2rem 0;">📍 Rio de Janeiro, Brasil</p>
+    </section>
+  </footer>
 </body>
 </html>
