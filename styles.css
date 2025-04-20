@@ -4,6 +4,7 @@
 :root {
   --bege-claro-1:      #EDD6B2;
   --bege-claro-2:      #EDE0BA;
+  --bege-claro-3:       #ebe3cb
 
   --oliva-claro:       #C8C197;
   --oliva:             #8E8640;
@@ -19,7 +20,7 @@
    CONFIGURAÇÃO GLOBAL
 ===================================================== */
 body {
-  background-color: var(--bege-claro-2);
+  background-color: var(--bege-claro-3);
   color: var(--verde-profund);
   font-family: sans-serif;
   margin: 0;
@@ -38,7 +39,7 @@ body {
    1. CABEÇALHO E NAVEGAÇÃO
 ===================================================== */
 .site-header {
-  background-color: pink;
+  background-color: #ebe3cb;
    padding: 0;
 }
 
@@ -50,7 +51,7 @@ body {
 }
 
 .gave-logo1 {
-  background-color: lightblue;
+  background-color: #ebe3cb;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -63,7 +64,7 @@ body {
   margin: 0 auto;
 }
 .site-nav {
-  background-color: lightgreen;
+  background-color: #ebe3cb;
   margin-top: 0;
   padding-top: 5px;
 }
