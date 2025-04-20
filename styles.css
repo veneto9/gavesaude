@@ -1,32 +1,44 @@
 /* styles.css */
 
-/* garante que a .container tenha o mesmo max-width do seu conteúdo */
-.container {
-  max-width: 800px;   /* ou o valor que você já usa */
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* header não precisa de altura fixa agora */
+/* Banner com dimensões exatas e corte do background */
 .banner {
-  margin: 0 auto;
-  text-align: center;
+  position: relative;
+  width: 1584px;                     /* largura fixa do recorte */
+  height: 271px;                     /* altura fixa do recorte */
+  margin: 0 auto;                    /* centraliza horizontalmente */
+  background: url("gave_logo1.png")  /* caminho da sua imagem */
+              no-repeat center;      
+  background-size: 1584px 271px;     /* força o tamanho do recorte */
+  overflow: hidden;                  /* esconde bordas excedentes */
 }
 
-/* imagem do banner fica responsiva */
-.banner-img {
-  display: block;           /* remove espaçamento inline */
-  width: 100%;              /* ocupa 100% da largura da .container */
-  max-width: 1584px;        /* não cresce além do tamanho original */
-  height: auto;             /* mantém proporção (271px na escala 1:1) */
+/* Texto posicionado sobre o banner */
+.banner-text {
+  position: absolute;
+  top: 50%;  
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;                        /* ajustar conforme espaço livre */
+  max-width: 1200px;                 /* opcional, limita texto */
+  text-align: center;                
+  color: #3C2E27;                    /* marrom escuro da paleta */
 }
 
-/* se você quisesse usar o banner como background em vez de <img>, poderia fazer:
-.banner {
-  background: url("gave_logo1.png") center/cover no-repeat;
-  width: 100%;
-  max-width: 1584px;
-  height: 271px;
-  margin: 0 auto;
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin: 0.2em 0;
 }
-*/
+
+.banner-text p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsividade: em telas menores, banner encolhe proporcionalmente */
+@media (max-width: 1600px) {
+  .banner {
+    width: 100%;
+    max-width: 1584px;
+    background-size: cover;          /* adapta o background ao novo width */
+  }
+}
