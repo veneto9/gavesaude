@@ -1,149 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GaveSaúde</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-        }
-        
-        /* Imagem Título (largura total, altura automática) */
-        .header-img {
-            width: 100%;
-            max-width: 1584px;
-            display: block;
-            margin: 0 auto;
-        }
-        
-        /* Container Principal ajustado para 1584px */
-        .main-container {
-            width: 100%;
-            max-width: 1584px;
-            margin: 0 auto;
-            padding: 40px;
-            box-sizing: border-box;
-            background-color: white;
-        }
-        
-        /* Seção de Introdução */
-        .intro {
-            text-align: left;
-            margin: 50px 0;
-            padding: 0 20px;
-        }
-        
-        .intro h1 {
-            color: #2a5ca8;
-            font-size: 2.8em;
-            margin-bottom: 20px;
-        }
-        
-        .intro p {
-            font-size: 1.2em;
-            max-width: 1200px;
-        }
-        
-        /* Serviços - 3 colunas com espaçamento proporcional */
-        .servicos {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            margin: 60px 0;
-            padding: 0 20px;
-        }
-        
-        .servico {
-            flex: 1;
-            min-width: 480px;
-            background: #f9f9f9;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .servico:hover {
-            transform: translateY(-5px);
-        }
-        
-        .servico h3 {
-            color: #2a5ca8;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        
-        .servico p {
-            font-size: 1.1em;
-            line-height: 1.8;
-        }
-        
-        /* Rodapé estendido */
-        footer {
-            background: #2a5ca8;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            width: 100%;
-            max-width: 1584px;
-            margin: 0 auto;
-        }
-        
-        footer p {
-            font-size: 1.1em;
-            margin: 0;
-        }
-        
-        /* Responsividade para telas menores */
-        @media (max-width: 1200px) {
-            .servicos {
-                flex-wrap: wrap;
-            }
-            
-            .servico {
-                min-width: 100%;
-                margin-bottom: 30px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GaveSaúde</title>
+  <style>
+    /* 1) Banner como background, já na largura/altura desejadas */
+    .banner {
+      position: relative;
+      width: 100%;
+      max-width: 1584px;        /* largura nativa */
+      height: 271px;            /* altura nativa */
+      margin: 0 auto;
+      background: url("gave_logo1.png") no-repeat center;
+      background-size: cover;
+      overflow: hidden;         /* corta qualquer excesso */
+    }
+
+    /* 2) Container interno para o texto, centradinho */
+    .banner-text {
+      position: absolute;
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;               /* ajuste conforme espaço livre */
+      max-width: 1200px;        /* não deixa o texto se espalhar demais */
+      text-align: center;       /* ou left, se preferir alinhado à esquerda */
+      color: #3C2E27;           /* escolha uma cor com contraste */
+    }
+    .banner-text h1 {
+      font-size: 2.5rem;
+      margin: 0 0 0.5em;
+    }
+    .banner-text p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    /* resto do seu CSS… */
+  </style>
 </head>
 <body>
-    <!-- Imagem Título (mantida como original) -->
-    <img src="gave_logo1.jpg" alt="GaveSaúde" class="header-img">
-    
-    <div class="main-container">
-        <!-- Seção de Introdução -->
-        <section class="intro">
-            <h1>Bem-vindo à GaveSaúde</h1>
-            <p>Oferecemos soluções integradas em saúde pública e epidemiologia, combinando expertise técnica e inovação para proteger comunidades. Nossa abordagem multidisciplinar garante respostas eficazes aos desafios contemporâneos da saúde coletiva.</p>
-        </section>
-        
-        <!-- Serviços -->
-        <section class="servicos">
-            <div class="servico">
-                <h3>Vigilância Epidemiológica</h3>
-                <p>Monitoramento contínuo e análise de dados epidemiológicos para identificação precoce de surtos e prevenção de doenças, com relatórios customizados para gestores de saúde.</p>
-            </div>
-            <div class="servico">
-                <h3>Consultoria em Saúde</h3>
-                <p>Desenvolvimento de estratégias personalizadas para instituições públicas e privadas, alinhando melhores práticas às necessidades específicas de cada organização.</p>
-            </div>
-            <div class="servico">
-                <h3>Capacitação Profissional</h3>
-                <p>Programas de treinamento e atualização para profissionais da saúde, com metodologias ativas e estudos de caso baseados em situações reais.</p>
-            </div>
-        </section>
+
+  <!-- Header agora só com a div de texto em cima do background -->
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Guia de Vigilância Epidemiológica</h1>
+      <p>Portal de apoio a profissionais e gestores em saúde pública</p>
     </div>
-    
-    <!-- Rodapé -->
-    <footer>
-        <p>© 2024 GaveSaúde. Todos os direitos reservados.</p>
-    </footer>
+  </header>
+
+  <!-- seu .main-container e o resto do site continuam abaixo… -->
+
 </body>
 </html>
