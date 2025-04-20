@@ -135,6 +135,7 @@
   .highlight-indicators h2 {
     font-size: 1.4rem;
   }
+}
 
 /* ==========================================
    1) Garante que o header esconda excessos
@@ -152,7 +153,7 @@
   display: block;      /* remove espaçamento inline */
   max-width: 50px;    /* ajuste esse valor ao tamanho que você quer */
   width: 40%;         /* em telas menores, ela “flui” até esse max-width */
-  height: auto;        /* preserva proporção
+  height: auto;        /* preserva proporção */
    }
 
  
@@ -200,8 +201,31 @@ footer {
   border-top-color: var(--marrom-terroso);
 }
    
- /* ==========================================
+ */ ==========================================
    3) Se seu header tiver padding vertical,
       subtraia-o do max-height:
-   ========================================== */
+   ========================================== 
 /*
+
+   /* -----------------------------------------------
+   Variáveis de Cores – Paleta
+----------------------------------------------- */
+:root {
+  --bege-claro-1:      #EDD6B2;
+  --bege-claro-2:      #EDE0BA;
+  --oliva-claro:       #C8C197;
+  --oliva:             #8E8640;
+  --oliva-escuro:      #555534;
+  --marrom-terroso:    #A45F3B;
+  --laranja-terroso:   #A66E31;
+  --verde-profund:     #194C42;
+}
+
+/* -----------------------------------------------
+   Base
+----------------------------------------------- */
+body {
+  background-color: var(--bege-claro-2);
+  color: var(--verde-profund);
+  font-family: sans-serif;
+}
