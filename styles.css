@@ -20,14 +20,13 @@
    CONFIGURAÇÃO GLOBAL
 ===================================================== */
 body {
-  background-color: #ebe3cb;
+  background-color: #ebe3cb;  /* Fundo padrão para toda a página */
   color: #194C42;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
-
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -39,7 +38,6 @@ body {
    1. CABEÇALHO E NAVEGAÇÃO
 ===================================================== */
 .site-header {
-  background-color: #ebe3cb;
    padding: 0;
 }
 
@@ -51,7 +49,6 @@ body {
 }
 
 .gave-logo1 {
-  background-color: #ebe3cb;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -64,7 +61,6 @@ body {
   margin: 0 auto;
 }
 .site-nav {
-  background-color: #ebe3cb;
   margin-top: 0;
   padding-top: 5px;
   text-align: center; /* ⬅️ ESSENCIAL para centralizar os links */
