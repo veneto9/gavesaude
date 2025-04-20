@@ -52,14 +52,16 @@ body {
 
 .gave-logo1 .logo-image {
   display: block;
-  max-width: 50px;
-  width: 40%;
+  max-width: 1000px;
+  width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 .site-nav {
   flex-basis: 100%;
-  margin-top: 1rem;
+  margin-top: 0; /* estava 1rem, diminui para aproximar do logo */
+  padding-top: 10px;
   text-align: center;
 }
 .site-nav a {
